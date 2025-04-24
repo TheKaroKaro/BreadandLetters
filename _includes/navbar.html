@@ -10,27 +10,27 @@
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="/">Home</a>
+          <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ site.baseurl }}/">Home</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="recipesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Sourdough
           </a>
           <ul class="dropdown-menu" aria-labelledby="recipesDropdown">
-            <li><a class="dropdown-item" href="/sourdough #Cuisine">Cuisine</a></li>
-			<li><a class="dropdown-item" href="/sourdough #Ethno-cultural">Ethno-cultural</a></li>
-            <li><a class="dropdown-item" href="/sourdough #Linguistic">Linguistic</a></li>
-            <li><a class="dropdown-item" href="/sourdough #Technological">Technological</a></li>
-			<li><a class="dropdown-item" href="/sourdough #Agricultural">Farm and Gardens</a></li>
+            <li><a class="dropdown-item" href="{{ site.baseurl }}/sourdough #Cuisine">Cuisine</a></li>
+			<li><a class="dropdown-item" href="{{ site.baseurl }}/sourdough #Ethno-cultural">Ethno-cultural</a></li>
+            <li><a class="dropdown-item" href="{{ site.baseurl }}/sourdough #Linguistic">Linguistic</a></li>
+            <li><a class="dropdown-item" href="{{ site.baseurl }}/sourdough #Technological">Technological</a></li>
+			<li><a class="dropdown-item" href="{{ site.baseurl }}/sourdough #Agricultural">Farm and Gardens</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="/recipes">All Recipes</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link {% if page.url contains '/artisan' %}active{% endif %}" href="/artisan">Artisan</a>
+          <a class="nav-link {% if page.url contains '/artisan' %}active{% endif %}" href="{{ site.baseurl }}/artisan">Artisan</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {% if page.url contains '/about' %}active{% endif %}" href="/about">About</a>
+          <a class="nav-link {% if page.url contains '/about' %}active{% endif %}" href="{{ site.baseurl }}/about">About</a>
         </li>
       </ul>
       <form class="d-flex ms-lg-3 mt-3 mt-lg-0" action="/search" role="search">
