@@ -1,0 +1,262 @@
+---
+---
+
+// Color Palette
+$color-primary: #8B5943; // Dark teal
+$color-secondary: #D9BF9D; // Soft teal
+$color-accent: #E1D1B9; // Peach
+$color-light: #E3E1E6; // Cream
+$color-dark: #5B484A; // Darker teal
+$color-text: #333333;
+$color-gray: #E0E0E0;
+
+// Typography
+$font-base: 'Inter', sans-serif;
+$font-heading: 'Inter', sans-serif;
+
+body {
+  font-family: $font-base;
+  color: $color-text;
+  background: $color-light;
+  line-height: 1.6;
+  padding-top: 80px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  font-weight: 700;
+  color: $color-dark;
+}
+
+// Navigation
+.navbar {
+  background: rgba($color-dark, 0.98) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  
+  .navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  
+  .nav-link {
+    position: relative;
+    margin: 0 0.5rem;
+    font-weight: 500;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: $color-accent;
+      transition: width 0.3s ease;
+    }
+    
+    &:hover::after,
+    &.active::after {
+      width: 100%;
+    }
+  }
+}
+
+// Hero Section
+.hero-section {
+  background: linear-gradient(rgba($color-dark, 0.85), rgba($color-dark, 0.85)), 
+              url('/assets/images/hero-bg.png') center/cover no-repeat;
+  padding: 6rem 0;
+  color: white;
+  text-align: center;
+  border-radius: 20px; // This creates curved bottom edges
+  overflow: hidden; // Ensures the content respects the border radius
+
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  }
+  
+  .breadcrumb-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    
+    .breadcrumb-link {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      
+      &:hover, &.active {
+        background: rgba(white, 0.2);
+      }
+      
+      &.active {
+        font-weight: 600;
+      }
+    }
+    
+    .breadcrumb-divider {
+      color: rgba(white, 0.5);
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+// Cards
+.card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  
+  .card-img-top {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .card-text {
+    color: lighten($color-text, 20%);
+    font-size: 0.95rem;
+  }
+}
+
+// Featured Card
+.featured-card {
+  .card-img-top {
+    height: 400px;
+  }
+  
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 70%);
+  }
+  
+  .card-body {
+    position: relative;
+    z-index: 1;
+    color: white;
+    
+    .card-title {
+      font-size: 1.75rem;
+    }
+    
+    .card-text {
+      color: rgba(0, 0, 0, 0.9);
+    }
+  }
+}
+
+// Like Button
+.btn-like {
+  border: none;
+  background: $color-gray;
+  color: $color-text;
+  
+  &.liked {
+    background: $color-accent;
+    color: darken($color-accent, 40%);
+    
+    .fa-heart {
+      color: #E74C3C;
+    }
+  }
+  
+  .fa-heart {
+    transition: all 0.3s ease;
+  }
+}
+
+// Post Content
+.post-content {
+  max-width: 800px;
+  margin: 0 auto;
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 2rem auto;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+  }
+  
+  // Image captions
+  em {
+    display: block;
+    text-align: center;
+    margin-top: -1.5rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+    font-style: normal;
+  }
+}
+
+// Responsive Adjustments
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 4rem 0;
+    
+    h1 {
+      font-size: 2.25rem;
+    }
+    
+    .breadcrumb-nav {
+      flex-wrap: wrap;
+    }
+  }
+  
+  .featured-card .card-img-top {
+    height: 250px;
+  }
+}
+
+
+.newsletter-section {
+  padding: 5rem 0;
+  
+  .newsletter-card {
+    padding: 2.5rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    
+    @media (max-width: 768px) {
+      padding: 1.5rem;
+    }
+  }
+}

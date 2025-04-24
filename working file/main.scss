@@ -1,0 +1,132 @@
+---
+---
+
+// Color Palette
+$color-primary: #64B6AC;
+$color-secondary: #DBD8AE;
+$color-light: #FEE9E1;
+$color-dark: #5D737E;
+$color-accent: #FAD4C0;
+$color-cream: #FFFCF9;
+$color-danger: #E8A87C;
+
+body {
+  padding-top: 80px;
+  background: $color-cream;
+  font-family: 'Inter', sans-serif;
+  color: $color-dark;
+  line-height: 1.6;
+}
+
+a {
+  color: $color-primary;
+  transition: all 0.3s ease;
+  &:hover { color: darken($color-primary, 15%); }
+}
+
+// Navbar
+.navbar {
+  background: rgba($color-dark, 0.98) !important;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  
+  .nav-link {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: $color-accent;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+    &:hover::after { width: 70%; }
+    &.active::after { width: 70%; }
+  }
+}
+
+// Hero Section
+.hero-section {
+  background: linear-gradient(rgba($color-dark, 0.8), rgba($color-dark, 0.8));
+  padding: 8rem 0;
+  
+  h1 {
+    font-size: 3.5rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  }
+}
+
+// Cards
+.card {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+}
+
+// Artisan Page
+.artisan-card {
+  .card-img-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:hover .card-img-overlay { opacity: 1; }
+}
+
+// Footer
+.footer {
+  background: $color-dark;
+  color: white;
+  
+  .social-icons a {
+    background: rgba(white, 0.1);
+    &:hover { background: $color-primary; }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 5rem 0;
+    h1 { font-size: 2.5rem; }
+  }
+}
+
+// Inside your main.scss file
+.post-content {
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 2rem auto;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    
+    // Optional: Add a light border
+    border: 1px solid #eee;
+  }
+
+  // Style for images with captions (using <em> tag in Markdown)
+  em {
+    display: block;
+    text-align: center;
+    margin-top: -1.5rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+    font-style: normal;
+  }
+}
+
+.post-content img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+}

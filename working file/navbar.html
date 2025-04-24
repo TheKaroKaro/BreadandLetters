@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img src="{{ site.logo }}" alt="Logo" height="50" class="brand-logo me-2">
+      <span class="brand-text fs-4" style="color: #F2E0B3;">Bread & Letters</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link hover-underline {% if page.url == '/' %}active{% endif %}" href="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle hover-underline" href="#" data-bs-toggle="dropdown">
+            Sourdough
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/sourdough/beginner">Beginner Guides</a></li>
+            <li><a class="dropdown-item" href="/sourdough/recipes">Recipes</a></li>
+            <li><a class="dropdown-item" href="/sourdough/troubleshooting">Troubleshooting</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link hover-underline {% if page.url contains '/artisan' %}active{% endif %}" href="/artisan">Artisan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link hover-underline {% if page.url contains '/about' %}active{% endif %}" href="/about">About Us</a>
+        </li>
+      </ul>
+      <form class="d-flex ms-lg-3 mt-3 mt-lg-0 search-form" action="/search">
+        <input type="search" class="form-control search-input" placeholder="Search recipes...">
+        <button type="submit" class="btn btn-search">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,27 @@
+title: Bread and Letters
+url: "breadandletters.com"
+author:
+  name: "AOTN"
+  email: "your@email.com"
+  twitter: "@yourhandle"
+  bio: "About the author..."
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Custom variables
+logo: /assets/images/logo.png
+disqus_shortname: b-l
+color_primary: "#64B6AC"
+color_secondary: "#DBD8AE"
+
+sass:
+  sass_dir: assets/css
+  style: compressed
