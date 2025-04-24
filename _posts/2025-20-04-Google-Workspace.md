@@ -6,6 +6,7 @@ categories: [Sourdough]
 subcategory: Technological
 image: {{ site.baseurl }}/assets/images/post/sourdough/technology/Googleworkspace.png
 thumbnail: {{ site.baseurl }}/assets/images/post/sourdough/technology/Googleworkspace.png
+
 ---
 
 
