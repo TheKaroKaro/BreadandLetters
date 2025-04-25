@@ -15,7 +15,7 @@ permalink: /Sourdough
     {% for post in Sourdough_posts %}
     <div class="col-md-6 col-lg-4">
       <div class="card h-100">
-        <img src="{{ post.thumbnail | default: '/assets/images/default-bread.jpg' }}" 
+        <img src="{{ post.thumbnail | default: site.baseurl | append: '/assets/images/default-bread.jpg' }}" 
              class="card-img-top" 
              alt="{{ post.title }}" 
              loading="lazy">
@@ -28,7 +28,7 @@ permalink: /Sourdough
           <p class="card-text text-muted">{{ post.excerpt | strip_html | truncate: 120 }}</p>
         </div>
         <div class="card-footer bg-transparent border-top-0">
-          <a href="{{ post.url }}" class="btn btn-sm btn-outline-primary stretched-link">Read More</a>
+          <a href="{{ post.url | relative_url }}" class="btn btn-sm btn-outline-primary stretched-link">Read More</a>
         </div>
       </div>
     </div>
@@ -260,11 +260,12 @@ permalink: /Sourdough
 /* Ensure consistent styling with the rest of the site */
 .hero-section {
   background: linear-gradient(rgba(58, 74, 79, 0.85), rgba(58, 74, 79, 0.85)), 
-              url('/assets/images/hero-bg.jpg') center/cover no-repeat;
+              url('{{ site.baseurl }}/assets/images/hero-bg.jpg') center/cover no-repeat;
   padding: 6rem 0;
   color: white;
   text-align: center;
 }
+
 
 .hero-section h1 {
   font-size: 3rem;
