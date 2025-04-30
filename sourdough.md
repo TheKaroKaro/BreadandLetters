@@ -2,10 +2,10 @@
 layout: default
 title: Sourdough
 description: Explore our collection of creative fantasy
-permalink: /Sourdough
+permalink: /sourdough
 ---
 
-<section id="Cuisine">
+<section id="cuisine">
 #Cuisine
 
 <div class="my-5"></div>
@@ -55,7 +55,7 @@ permalink: /Sourdough
 <div class="my-5"></div>
 </section>
 
-<section id="Ethno-cultural">
+<section id="ethno-cultural">
 #Ethno-cultural
 
 <div class="my-5"></div>
@@ -105,7 +105,7 @@ permalink: /Sourdough
 <div class="my-5"></div>
 </section>
 
-<section id="Linguistic">
+<section id="linguistic">
 #Linguistic
 
 <div class="my-5"></div>
@@ -155,7 +155,7 @@ permalink: /Sourdough
 <div class="my-5"></div>
 </section>
 
-<section id="Technological">
+<section id="technological">
 #Technological
 
 <div class="my-5"></div>
@@ -206,7 +206,7 @@ permalink: /Sourdough
 </section>
 
 
-<section id="Agricultural">
+<section id="agricultural">
 #Agricultural
 
 <div class="my-5"></div>
