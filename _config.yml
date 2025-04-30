@@ -26,3 +26,8 @@ color_secondary: "#DBD8AE"
 sass:
   sass_dir: assets/css
   style: compressed
+  
+
+markdown: kramdown  # Ensure you're using kramdown
+relative_links:
+  enabled: false    # Disable relative path conversion
