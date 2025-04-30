@@ -4,8 +4,8 @@ title: "Tiết Canh: A Traditional Vietnamese Delicacy"
 date: 2025-03-10
 categories: [Sourdough]
 subcategory: Cuisine
-image: /assets/images/post/sourdough/cuisine/TiếtCanhATraditionalVietnameseDelicacy.jpg
-thumbnail: /assets/images/post/sourdough/cuisine/TiếtCanhATraditionalVietnameseDelicacy.jpg
+image: {{ site.baseurl }}/assets/images/post/sourdough/cuisine/TiếtCanhATraditionalVietnameseDelicacy.jpg
+thumbnail: {{ site.baseurl }}/assets/images/post/sourdough/cuisine/TiếtCanhATraditionalVietnameseDelicacy.jpg
 ---
 
 
