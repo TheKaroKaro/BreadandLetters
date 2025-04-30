@@ -29,5 +29,3 @@ sass:
   
 
 markdown: kramdown  # Ensure you're using kramdown
-relative_links:
-  enabled: false    # Disable relative path conversion
