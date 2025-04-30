@@ -15,7 +15,7 @@ permalink: /sourdough
     {% for post in Sourdough_posts %}
     <div class="col-md-6 col-lg-4">
       <div class="card h-100">
-        <img src="{{ post.thumbnail | default: site.baseurl | append: '/assets/images/default-bread.jpg' }}" 
+        <img src="{{ post.thumbnail | default: '/assets/images/default-bread.jpg' }}" 
              class="card-img-top" 
              alt="{{ post.title }}" 
              loading="lazy">
