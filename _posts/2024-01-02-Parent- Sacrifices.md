@@ -3,8 +3,8 @@ layout: post
 title: "Parent's Sacrifice"
 date: 2024-01-02
 categories: [Artisan]  # Add categories here
-image: {{ site.baseurl }}/assets/images/post/artisan/ParentSacrifice.png
-thumbnail: {{ site.baseurl }}/assets/images/post/artisan/ParentSacrifice.png
+image: /assets/images/post/artisan/ParentSacrifice.png
+thumbnail: /assets/images/post/artisan/ParentSacrifice.png
 ---
 
 I was having dinner with friends

@@ -3,8 +3,8 @@ layout: post
 title: "A Grateful Taxi Driver"
 date: 2023-10-01
 categories: [Artisan]  # Add categories here
-image: {{ site.baseurl }}/assets/images/post/artisan/GratefulTaxiDriver.png
-thumbnail: {{ site.baseurl }}/assets/images/post/artisan/GratefulTaxiDriver.png
+image: /assets/images/post/artisan/GratefulTaxiDriver.png
+thumbnail: /assets/images/post/artisan/GratefulTaxiDriver.png
 ---
 
 I was on my way to the airport
