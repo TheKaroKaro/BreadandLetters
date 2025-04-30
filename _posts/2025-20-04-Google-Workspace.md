@@ -4,8 +4,8 @@ title: "Google Workspace"
 date: 2025-04-20
 categories: [Sourdough]
 subcategory: Technological
-image: /assets/images/post/sourdough/technology/Googleworkspace.png
-thumbnail: /assets/images/post/sourdough/technology/Googleworkspace.png
+image: {{ site.baseurl }}/assets/images/post/sourdough/technology/Googleworkspace.png
+thumbnail: {{ site.baseurl }}/assets/images/post/sourdough/technology/Googleworkspace.png
 
 ---
 
