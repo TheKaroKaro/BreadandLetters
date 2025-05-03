@@ -4,8 +4,8 @@ title: "Grilled Crocodile (Cá Sấu Nướng)"
 date: 2025-04-23
 categories: [Sourdough]
 subcategory: Cuisine
-image: /assets/images/post/sourdough/cuisine/Grilled_Crocodile_(Cá_Sấu_Nướng).jpg
-thumbnail: /assets/images/post/sourdough/cuisine/Grilled_Crocodile_(Cá_Sấu_Nướng).jpg
+image: /assets/images/post/sourdough/cuisine/Grilled_Crocodile_(Cá_Sấu_Nướng).png
+thumbnail: /assets/images/post/sourdough/cuisine/Grilled_Crocodile_(Cá_Sấu_Nướng).png
 ---
 # Grilled Crocodile (Cá Sấu Nướng)
 
