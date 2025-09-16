@@ -1,53 +1,55 @@
-<footer class="footer py-5 mt-5">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-lg-4">
-        <div class="footer-brand d-flex align-items-center mb-3">
-          <img src="{{ site.logo }}" alt="Logo" height="40" class="me-2">
-          <span class="fs-4" style="color: #64B6AC;">Bread & Letters</span>
-        </div>
-        <p class="text-muted">Crafting Stories Like Sourdough – Slow, Rich, and Worth the Wait</p>
-        <div class="social-icons mt-3">
-          <a href="#" class="text-decoration-none me-3"><i class="fab fa-instagram fa-lg"></i></a>
-          <a href="#" class="text-decoration-none me-3"><i class="fab fa-pinterest fa-lg"></i></a>
-          <a href="#" class="text-decoration-none me-3"><i class="fab fa-twitter fa-lg"></i></a>
-          <a href="#" class="text-decoration-none"><i class="fab fa-facebook fa-lg"></i></a>
+<footer class="bg-gray-800 text-white py-12">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="font-bold text-xl mb-4 flex items-center">
+          <span class="mr-1">🍞</span> {{ site.title }}
+        </h3>
+        <p class="text-gray-400 mb-4">Practical skills for ambitious young professionals in South East Asia.</p>
+        <div class="flex gap-3">
+          {% if site.social.linkedin %}
+          <a href="{{ site.social.linkedin }}" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+          {% endif %}
+          {% if site.social.instagram %}
+          <a href="{{ site.social.instagram }}" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+          {% endif %}
+          {% if site.social.twitter %}
+          <a href="{{ site.social.twitter }}" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+          {% endif %}
         </div>
       </div>
-
-      <div class="col-lg-2 col-md-4">
-        <h5 class="mb-3">Explore</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-muted">Home</a></li>
-          <li class="nav-item mb-2"><a href="/sourdough" class="nav-link p-0 text-muted">Sourdough</a></li>
-          <li class="nav-item mb-2"><a href="/artisan" class="nav-link p-0 text-muted">Artisan</a></li>
-          <li class="nav-item mb-2"><a href="/categories" class="nav-link p-0 text-muted">Categories</a></li>
-          <li class="nav-item mb-2"><a href="/about" class="nav-link p-0 text-muted">About</a></li>
+      
+      <div>
+        <h4 class="font-semibold mb-4">Our Sites</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="{{ site.academy_url }}" class="hover:text-white">Academy</a></li>
+          <li><a href="{{ site.blog_url }}" class="hover:text-white">Blog</a></li>
+          <li><a href="{{ site.tools_url }}" class="hover:text-white">Tools</a></li>
         </ul>
       </div>
-
-      <div class="col-lg-3 col-md-4">
-        <h5 class="mb-3">Newsletter</h5>
-        <p class="text-muted">Rise Every Week With Recipes, Tips & Stories Worth Savoring</p>
-        <form class="mt-3">
-          <div class="input-group mb-3">
-            <input type="email" class="form-control" placeholder="Your email">
-            <button class="btn" type="submit" style="background-color: #64B6AC; color: white;">Subscribe</button>
-          </div>
-        </form>
+      
+      <div>
+        <h4 class="font-semibold mb-4">Resources</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="{{ site.academy_url }}" class="hover:text-white">Classes</a></li>
+          <li><a href="{{ site.blog_url }}" class="hover:text-white">Articles</a></li>
+          <li><a href="{{ site.academy_url }}/about" class="hover:text-white">About Us</a></li>
+          <li><a href="{{ site.academy_url }}/contact" class="hover:text-white">Contact Us</a></li>
+        </ul>
       </div>
-
-      <div class="col-lg-3 col-md-4">
-        <h5 class="mb-3">Contact</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="mailto:{{ site.author.email }}" class="nav-link p-0 text-muted"><i class="fas fa-envelope me-2"></i> {{ site.author.email }}</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><i class="fas fa-map-marker-alt me-2"></i> Virtual Bakery</a></li>
+      
+      <div>
+        <h4 class="font-semibold mb-4">Company</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="{{ site.academy_url }}/privacy" class="hover:text-white">Privacy Policy</a></li>
+          <li><a href="{{ site.academy_url }}/terms" class="hover:text-white">Terms of Service</a></li>
+          <li><a href="mailto:{{ site.email }}" class="hover:text-white">{{ site.email }}</a></li>
         </ul>
       </div>
     </div>
-
-    <div class="border-top mt-4 pt-4 text-center text-muted">
-      <small>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</small>
+    
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+      <p>© {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
     </div>
   </div>
 </footer>

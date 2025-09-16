@@ -3,12 +3,11 @@
 <head>
   {% include head.html %}
 </head>
-<body>
-  {% include navbar.html %}
-  <main class="container mt-5 pt-4">
+<body class="bg-white text-gray-900">
+  {% include header.html %}
+  <main>
     {{ content }}
   </main>
   {% include footer.html %}
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>

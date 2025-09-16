@@ -1,0 +1,34 @@
+<header class="w-full sticky top-0 bg-white/90 backdrop-blur border-b z-50">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="{{ site.baseurl }}/" class="font-bold text-xl text-teal-700 flex items-center">
+      <span class="mr-1">🍞</span> {{ site.title }}
+    </a>
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="{{ site.academy_url }}" class="hover:text-teal-600 font-medium">Academy</a>
+      <a href="{{ site.blog_url }}" class="hover:text-teal-600 font-medium">Blog</a>
+      <a href="{{ site.tools_url }}" class="hover:text-teal-600 font-medium">Tools</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="{{ site.academy_url }}" class="px-4 py-2 rounded bg-teal-600 text-white text-sm font-medium hover:bg-teal-700">Get Started →</a>
+      <button class="md:hidden" id="mobile-menu-button">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="hidden md:hidden bg-white border-t" id="mobile-menu">
+    <div class="px-4 py-3 flex flex-col space-y-3">
+      <a href="{{ site.academy_url }}" class="hover:text-teal-600 font-medium">Academy</a>
+      <a href="{{ site.blog_url }}" class="hover:text-teal-600 font-medium">Blog</a>
+      <a href="{{ site.tools_url }}" class="hover:text-teal-600 font-medium">Tools</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  document.getElementById('mobile-menu-button').addEventListener('click', function() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  });
+</script>

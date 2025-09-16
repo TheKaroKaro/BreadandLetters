@@ -1,31 +1,28 @@
-title: Bread and Letters
-url: "https://breadandletters.com"
+# _config.yml
+title: Bread & Letters
+email: academy@breadandletters.com
+description: Practical skills and timeless stories for ambitious young professionals in South East Asia.
 baseurl: ""
-author:
-  name: "AOTN"
-  email: "your@email.com"
-  twitter: "@yourhandle"
-  bio: "About the author..."
+url: "https://breadandletters.com"
+
+# Social media
+twitter_username: breadandletters
+github_username: breadandletters
+
+# Build settings
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
-# Exclude from processing
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor
+# Custom variables for subdomains
+academy_url: "https://academy.breadandletters.com"
+blog_url: "https://blog.breadandletters.com"
+tools_url: "https://tools.breadandletters.com"
 
-# Custom variables
-logo: /assets/images/logo.png
-disqus_shortname: b-l
-color_primary: "#64B6AC"
-color_secondary: "#DBD8AE"
-
-sass:
-  sass_dir: assets/css
-  style: compressed
-  
-
-markdown: kramdown  # Ensure you're using kramdown
+# Social media links
+social:
+  linkedin: "https://linkedin.com/company/breadandletters"
+  instagram: "https://instagram.com/breadandletters"
+  twitter: "https://twitter.com/breadandletters"
