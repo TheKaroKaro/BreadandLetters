@@ -1,0 +1,68 @@
+---
+layout: default
+title: Home
+description: Practical skills and timeless stories for ambitious young professionals.
+---
+
+<section class="hero-gradient">
+  <div class="max-w-6xl mx-auto px-4 pt-20 pb-12">
+    <div class="flex flex-col md:flex-row items-center gap-10">
+      <div class="flex-1 text-center md:text-left">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+          Practical Skills & Timeless Stories for Ambitious Professionals
+        </h1>
+        <p class="mt-4 text-lg text-gray-700 max-w-2xl mx-auto md:mx-0">
+          We provide the tools, knowledge, and inspiration to help you navigate your career and life with confidence.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="{{ site.academy_url }}" class="px-6 py-3 rounded bg-teal-600 text-white font-medium cta-button text-center">
+            Explore Our Classes →
+          </a>
+          <a href="{{ site.blog_url }}" class="px-6 py-3 rounded border border-gray-300 text-gray-800 font-medium cta-button text-center">
+            Read Our Articles →
+          </a>
+        </div>
+      </div>
+      <div class="flex-1 w-full flex justify-center">
+        <div class="w-2/3 md:w-full max-w-sm h-64 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12">Our Offerings</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <a href="{{ site.academy_url }}" class="block p-6 border rounded-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="text-6xl text-teal-600 mb-4">📚</div>
+        <h3 class="text-xl font-bold mb-2">The Academy</h3>
+        <p class="text-gray-600 text-sm">Online classes on essential workplace skills like Excel, Power BI, and presentations.</p>
+      </a>
+      <a href="{{ site.blog_url }}" class="block p-6 border rounded-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="text-6xl text-teal-600 mb-4">✍️</div>
+        <h3 class="text-xl font-bold mb-2">The Blog</h3>
+        <p class="text-gray-600 text-sm">Insights on career growth, general knowledge, and a collection of stories and fictions.</p>
+      </a>
+      <a href="{{ site.tools_url }}" class="block p-6 border rounded-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="text-6xl text-teal-600 mb-4">🛠️</div>
+        <h3 class="text-xl font-bold mb-2">Web Tools</h3>
+        <p class="text-gray-600 text-sm">A suite of web-based applications to help you with your daily tasks.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-50 py-16">
+  <div class="max-w-3xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-4">Join Our Community</h2>
+    <p class="text-gray-600 mb-8">Get career tips and updates on new classes and articles from our team.</p>
+    
+    <form class="flex flex-col sm:flex-row gap-2 max-w-xl mx-auto" netlify>
+      <input type="email" name="email" placeholder="Your email address" class="flex-1 px-4 py-3 rounded border focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+      <button type="submit" class="px-5 py-3 bg-teal-600 text-white rounded font-medium">Subscribe</button>
+    </form>
+  </div>
+</section>
