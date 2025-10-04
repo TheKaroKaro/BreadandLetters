@@ -18,7 +18,7 @@ plugins:
 
 # Custom variables for subdomains
 academy_url: "https://academy.breadandletters.com"
-blog_url: "https://blog.breadandletters.com"
+articles_url: "https://articles.breadandletters.com"
 tools_url: "https://tools.breadandletters.com"
 
 # Social media links
