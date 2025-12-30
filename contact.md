@@ -2,6 +2,7 @@
 layout: default
 title: Let's Connect
 description: Discuss automation consulting or Power Platform development.
+permalink: /contact/
 ---
 
 <div class="max-w-6xl mx-auto px-4 py-16">

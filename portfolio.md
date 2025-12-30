@@ -2,6 +2,7 @@
 layout: default
 title: My Automation Projects | Power Platform Solutions
 description: Real-world Power Platform projects I've built to solve business problems.
+permalink: /portfolio/
 ---
 
 <div class="max-w-6xl mx-auto px-4 py-16">

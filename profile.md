@@ -2,6 +2,7 @@
 layout: default
 title: Jefri Karo Karo | Professional Profile & CV
 description: Detailed career journey, skills, and achievements of Jefri Karo Karo - Contact Center Leader and Power Platform Developer.
+permalink: /profile/
 ---
 
 <div class="max-w-4xl mx-auto px-4 py-16">
