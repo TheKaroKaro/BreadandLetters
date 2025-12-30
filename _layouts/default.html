@@ -9,5 +9,10 @@
     {{ content }}
   </main>
   {% include footer.html %}
+  
+  <!-- Page-specific JavaScript -->
+  {% if page.url == '/portfolio/' %}
+  <script src="{{ '/assets/js/portfolio-filter.js' | relative_url }}"></script>
+  {% endif %}
 </body>
 </html>

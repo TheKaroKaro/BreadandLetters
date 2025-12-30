@@ -1,0 +1,55 @@
+- title: "eLeave & Attendance System"
+  description: "A complete leave management solution for 150+ contact center agents. Replaced manual spreadsheet tracking."
+  categories: ["Reporting"]
+  challenge: "Managers spent 2-3 hours weekly tracking leave requests via Excel and WhatsApp."
+  results:
+    - label: "Faster Process"
+      value: "70%"
+    - label: "Time Saved"
+      value: "12 hrs/month"
+  year: "2025"
+
+- title: "Quality Monitoring Form"
+  description: "Web based Quality Form system that automatically capture, summarize and identifies coaching opportunities."
+  categories: ["Quality"]
+  challenge: "Supervisors manually track, pivots, calculate qualiuty scores using excel based checklist forms, missing overall insights on critical coaching opportunities."
+  solution: "Create a web based quality form which automate scores calculation, automate summarization by weekly / monthly falure points by agents which provides full insights on quality"
+  results:
+    - label: "Coverage"
+      value: "Increased coaching session from 44 coaching to an average of 117 coaching per months."
+    - label: "Feedback Time"
+      value: "24 hrs"
+  year: "2024"
+
+- title: "Case Management"
+  description: "Web based CRM which capture, tracks and allow assignement of case into relevant teams."
+  categories: ["Contact Center Operation"]
+  challenge: "Every cases which is non claim related are not tracked and only captured manually in excel and everytime a relevant team is needed to beinvolved, case are then sent via email resulting in a long email trails which may confuses and causes case misfollowups."
+  solution: "Create a web based CRM which capture cases and store into the database, and allow case assignent with a single click allowing atomatic reminder and an efficiency case management."
+  results:
+    - label: "Efficiency"
+      value: "Improved AHT per case resulting in 6.23 hours saved monthly."
+    
+  year: "2024"
+
+- title: "Detractor Chatbots"
+  description: "Teams based chat bots alerting on potential detractors."
+  categories: ["Contact Center Operation"]
+  challenge: "NPS failure due to sensitive customers (one of them). Upstream team does not have visibility on sensitive cases which customer was already irate."
+  solution: "Integrate a teams bot into CRM which allows Level 1 CS to alert the case owner (L2 Upstream) if the customer was already disatisfied. This allows a better vbisibility upstream resulting in a better preparation by L2 before handling the case."
+  results:
+    - label: "Effectiveness"
+      value: "Improved NPS from 68 to 84 pts."
+    
+  year: "2025"
+
+- title: "Customer callback form automation"
+  description: "Teams based outbound call case management."
+  categories: ["Contact Center Operation"]
+  challenge: "Callback request cases was sync to a shared online excel file creating sync issues, data mismached, manual tracking with manual works from CS on (administrative works), manual SLAs calculation and missing overall case insights"
+  solution: "Integrate a teams bot into the contact form on client's website which allows each request to comes into an interactive case form into a team chats allowing atumatice timestamp catured and allowing minimal typing by CS which help reduce afterwork calls."
+  results:
+    - label: "Efficiency"
+      value: "Saved 0.78 hours / months."
+    
+  year: "2025"

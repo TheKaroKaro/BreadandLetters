@@ -1,28 +1,37 @@
-# _config.yml
-title: Bread & Letters
-email: academy@breadandletters.com
-description: Practical skills and timeless stories for ambitious young professionals in South East Asia.
-baseurl: ""
+title: "Bread & Letters"
+email: "hello@breadandletters.com"
+description: "Jefri Karo Karo: Contact Center Leader & Automation Developer. Practical automation solutions and career insights."
 url: "https://breadandletters.com"
+baseurl: ""
 
-# Social media
-twitter_username: breadandletters
-github_username: breadandletters
+# Personal Data (Used for centralization)
+author:
+  name: "Jefri Karo Karo"
+  role: "Contact Center Leader & Automation Developer"
+  location: "Malaysia (Serving Globally)"
+  linkedin: "jefrikrama"
+  twitter: "breadandletters"
+  github: "breadandletters"
+  status: "Open to Opportunities"
 
-# Build settings
-theme: minima
+# Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "My Profile"
+    url: "/profile/"
+  - title: "My Projects"
+    url: "/portfolio/"
+  - title: "Contact"
+    url: "/contact/"
+
+# External Links
+external_links:
+  articles: "https://articles.breadandletters.com"
+  tools: "https://tools.breadandletters.com"
+  academy: "https://academy.breadandletters.com"
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-
-# Custom variables for subdomains
-academy_url: "https://academy.breadandletters.com"
-articles_url: "https://articles.breadandletters.com"
-tools_url: "https://tools.breadandletters.com"
-
-# Social media links
-social:
-  linkedin: "https://linkedin.com/company/breadandletters"
-  instagram: "https://instagram.com/breadandletters"
-  twitter: "https://twitter.com/breadandletters"

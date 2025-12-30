@@ -1,19 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+:root {
+  --primary-teal: #0d9488;
+  --primary-teal-dark: #0f766e;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
 
 .hero-gradient {
-  background: linear-gradient(120deg, #f0fff4 0%, #e6fffa 100%);
+  background: linear-gradient(135deg, #f0fdfa 0%, #f0f9ff 100%);
 }
 
-.cta-button {
-  transition: all 0.3s ease;
+/* Smooth transitions */
+a, button {
+  transition: all 0.2s ease;
 }
 
-.cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Print styles for CV page */
+@media print {
+  .no-print {
+    display: none !important;
+  }
 }
