@@ -61,7 +61,7 @@ permalink: /profile/
         </li>
         <li class="flex items-center gap-3">
           <span class="text-gray-500 w-24">Email:</span>
-          <a href="mailto:hello@breadandletters.com" class="text-teal-600 hover:text-teal-700 font-medium">hello@breadandletters.com</a>
+          <a href="mailto:info@breadandletters.com" class="text-teal-600 hover:text-teal-700 font-medium">info@breadandletters.com</a>
         </li>
       </ul>
     </div>
