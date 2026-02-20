@@ -2,7 +2,7 @@
 layout: default
 title: Let's Connect
 description: Discuss automation consulting or Power Platform development.
-permalink: /contact/  # Changed from /profile/ to /contact/
+permalink: /contact/
 ---
 
 <div class="max-w-6xl mx-auto px-4 py-16">
@@ -86,8 +86,8 @@ permalink: /contact/  # Changed from /profile/ to /contact/
 </div>
 
 <script>
-// Your Google Apps Script URL (replace with your actual URL after deployment)
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz5aahnsj_zvQw96zcz0a0wV24FVcXO82byrAXchNAI91M1yR-PO6OUF-5sKFhxReUJ/exec';
+// REPLACE THIS with your Cloudflare Worker URL after deployment
+const WORKER_URL = 'https://portfolio-contact.your-subdomain.workers.dev';
 
 // Form submission handler
 document.addEventListener('DOMContentLoaded', function() {
@@ -127,37 +127,24 @@ document.addEventListener('DOMContentLoaded', function() {
     messageDiv.classList.add('hidden');
     
     try {
-      // Prepare data for Telegram
-      const data = {
-        name: name,
-        email: email,
-        message: message,
-        timestamp: new Date().toISOString(),
-        source: window.location.href
-      };
-      
-      console.log('Sending data:', data);
-      
-      // Send to Google Apps Script
-      const response = await fetch(GOOGLE_SCRIPT_URL, {
+      // Send to Cloudflare Worker
+      const response = await fetch(WORKER_URL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        mode: 'no-cors', // Important for Google Apps Script
-        body: JSON.stringify(data)
+        body: formData
       });
       
-      // Note: With 'no-cors' mode, we can't read the response
-      // But if it doesn't throw an error, it was sent successfully
+      const result = await response.json();
       
-      // Show success message
-      showMessage('success', 'Message sent successfully! I\'ll get back to you soon.');
-      
-      // Reset form after 2 seconds
-      setTimeout(() => {
-        form.reset();
-      }, 2000);
+      if (result.success) {
+        showMessage('success', 'Message sent successfully! I\'ll get back to you soon.');
+        
+        // Reset form after 2 seconds
+        setTimeout(() => {
+          form.reset();
+        }, 2000);
+      } else {
+        throw new Error(result.error || 'Failed to send');
+      }
       
     } catch (error) {
       console.error('Form submission error:', error);
@@ -226,8 +213,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  // Test connection on page load (optional)
-  console.log('Contact form loaded. Google Script URL:', GOOGLE_SCRIPT_URL);
+  console.log('Contact form loaded. Worker URL:', WORKER_URL);
 });
 </script>
 
