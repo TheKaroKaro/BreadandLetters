@@ -87,7 +87,7 @@ permalink: /contact/
 
 <script>
 // REPLACE THIS with your Cloudflare Worker URL after deployment
-const WORKER_URL = 'https://portfolio-contact.your-subdomain.workers.dev';
+const WORKER_URL = 'https://breadandletters.alchemistofthenorth.workers.dev';
 
 // Form submission handler
 document.addEventListener('DOMContentLoaded', function() {
