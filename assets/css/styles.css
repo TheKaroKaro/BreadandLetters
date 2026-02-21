@@ -1,85 +1,53 @@
----
----
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/* --- PORTFOLIO BENEFITS DASHBOARD --- */
 
-:root {
-  --primary-teal: #0d9488;
-  --primary-teal-dark: #0f766e;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-}
-
-.hero-gradient {
-  background: linear-gradient(135deg, #f0fdfa 0%, #f0f9ff 100%);
-}
-
-/* Smooth transitions */
-a, button {
-  transition: all 0.2s ease;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-/* Print styles for CV page */
-@media print {
-  .no-print {
-    display: none !important;
-  }
-}
-.project-results {
-    margin-top: 15px;
-    padding: 12px;
-    background: #f8fbff; /* Light blue tint to highlight achievements */
-    border-radius: 8px;
-    border-left: 4px solid #007bff;
+.project-results-container {
+    margin-top: 20px;
+    padding: 16px;
+    background: linear-gradient(135deg, #f0fdfa 0%, #e0f2fe 100%);
+    border-radius: 12px;
+    border: 1px solid #ccfbf1;
 }
 
 .results-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 12px;
+    text-align: center;
 }
 
 .result-item {
-    display: flex;
-    flex-direction: column;
-    background: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: 1px solid #e0e6ed;
-    min-width: 100px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(13, 148, 136, 0.05);
 }
 
 .result-label {
-    font-size: 0.7rem;
+    display: block;
+    font-size: 0.6rem;
     text-transform: uppercase;
-    color: #666;
-    font-weight: bold;
+    color: #0d9488;
+    font-weight: 700;
+    margin-bottom: 2px;
+    letter-spacing: 0.025em;
 }
 
 .result-value {
-    font-size: 0.95rem;
-    color: #007bff;
+    display: block;
+    font-size: 1rem;
+    color: #111827;
     font-weight: 800;
+    line-height: 1.2;
+}
+
+/* Ensure the card has a uniform height for grid symmetry */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-card > div:first-child {
+    flex-grow: 1;
 }

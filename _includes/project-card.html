@@ -1,19 +1,31 @@
-<div class="project-card" data-categories='{{ project.categories | join: "," }}'>
-  <div class="project-content">
-    <span class="category-badge">{{ project.categories | first }}</span>
-    <h3 class="project-title">{{ project.title }}</h3>
-    <p class="project-description">{{ project.description }}</p>
+<div class="project-card border rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition duration-300 mb-6" data-category="{{ project.categories | join: ',' }}">
+  <div class="p-8">
+    <div class="flex flex-wrap gap-2 mb-4">
+      {% for category in project.categories %}
+      <span class="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-xs font-semibold tracking-wide uppercase">
+        {{ category }}
+      </span>
+      {% endfor %}
+    </div>
     
-    <div class="project-details">
-      <p><strong>Challenge:</strong> {{ project.challenge }}</p>
+    <h3 class="text-2xl font-bold mb-3 text-gray-900">{{ project.title }}</h3>
+    <p class="text-gray-600 mb-6 leading-relaxed">{{ project.description }}</p>
+    
+    <div class="space-y-4 mb-6 border-l-2 border-gray-100 pl-4">
+      <div class="text-sm text-gray-700">
+        <strong class="text-gray-900 block mb-1">Challenge:</strong> 
+        {{ project.challenge }}
+      </div>
       {% if project.solution %}
-      <p><strong>Solution:</strong> {{ project.solution }}</p>
+      <div class="text-sm text-gray-700">
+        <strong class="text-gray-900 block mb-1">Solution:</strong> 
+        {{ project.solution }}
+      </div>
       {% endif %}
     </div>
 
     {% if project.results %}
-    <div class="project-results">
-      <strong>Impact & Benefits:</strong>
+    <div class="project-results-container mt-6">
       <div class="results-grid">
         {% for result in project.results %}
         <div class="result-item">
@@ -25,14 +37,13 @@
     </div>
     {% endif %}
 
-    <div class="status-bar">
-        <span class="status-label">Status</span>
-        <span class="status-value">{{ project.status | default: "Live / Production" }}</span>
+    <div class="flex items-center justify-between mt-8 pt-6 border-t border-gray-100">
+      <div class="flex items-center text-sm text-gray-500">
+        <i class="far fa-calendar-alt mr-2"></i> {{ project.year }}
+      </div>
+      <div class="px-3 py-1 bg-gray-100 text-gray-600 text-[10px] font-bold rounded uppercase tracking-tighter">
+        {{ project.status | default: "Live / Production" }}
+      </div>
     </div>
-  </div>
-  
-  <div class="project-footer">
-    <span class="project-year"><i class="far fa-calendar-alt"></i> {{ project.year }}</span>
-    <a href="#" class="discuss-link">Discuss Similar Project &rarr;</a>
   </div>
 </div>
