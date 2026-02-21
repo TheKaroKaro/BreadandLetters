@@ -1,34 +1,20 @@
 ---
 layout: default
 title: My Automation Projects | Power Platform Solutions
-description: Real-world Power Platform projects I've built to solve business problems.
 permalink: /portfolio/
 ---
 
-<div class="max-w-6xl mx-auto px-4 py-16">
+<div class="max-w-7xl mx-auto px-4 py-16">
   <div class="text-center mb-16">
-    <a href="/" class="inline-flex items-center text-teal-600 hover:text-teal-700 mb-8 transition-colors">
-      <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-      </svg>
-      Back to Home
-    </a>
-    
-    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">My Automation Projects</h1>
-    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-      Practical solutions built to transform operations, improve efficiency, and drive data-led decisions.
+    <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight">Automation Portfolio</h1>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-10">
+      Real-world solutions built to bridge the gap between operations and technology.
     </p>
     
-    <div class="flex flex-wrap gap-3 justify-center mt-10" id="filter-group">
-      <button class="filter-btn active px-6 py-2 rounded-full bg-teal-600 text-white text-sm font-bold shadow-md transition-all" data-filter="all">
-        All Projects
-      </button>
-      <button class="filter-btn px-6 py-2 rounded-full bg-white text-gray-600 border border-gray-200 text-sm font-bold transition-all" data-filter="Finance">
-        Finance
-      </button>
-      <button class="filter-btn px-6 py-2 rounded-full bg-white text-gray-600 border border-gray-200 text-sm font-bold transition-all" data-filter="Contact Center Operation">
-        Operations
-      </button>
+    <div class="flex flex-wrap gap-2 justify-center" id="filter-group">
+      <button class="filter-btn active px-5 py-2 rounded-lg bg-teal-600 text-white font-bold text-sm shadow-lg transition-all" data-filter="all">All</button>
+      <button class="filter-btn px-5 py-2 rounded-lg bg-white border border-gray-200 text-gray-600 font-bold text-sm hover:border-teal-400 transition-all" data-filter="Finance">Finance</button>
+      <button class="filter-btn px-5 py-2 rounded-lg bg-white border border-gray-200 text-gray-600 font-bold text-sm hover:border-teal-400 transition-all" data-filter="Contact Center Operation">Operations</button>
     </div>
   </div>
 
@@ -36,13 +22,6 @@ permalink: /portfolio/
     {% for project in site.data.projects %}
       {% include project-card.html %}
     {% endfor %}
-  </div>
-
-  <div class="mt-20 text-center">
-    <h2 class="text-2xl font-bold mb-4">Have a similar business challenge?</h2>
-    <a href="/contact/" class="inline-block px-10 py-4 bg-teal-600 text-white font-bold rounded-xl hover:bg-teal-500 transition-all shadow-xl">
-      Start a Project Discussion
-    </a>
   </div>
 </div>
 
@@ -55,19 +34,21 @@ document.addEventListener('DOMContentLoaded', function() {
     btn.addEventListener('click', () => {
       const filter = btn.getAttribute('data-filter');
 
+      // UI Update
       buttons.forEach(b => {
-        b.classList.remove('active', 'bg-teal-600', 'text-white', 'shadow-md');
+        b.classList.remove('bg-teal-600', 'text-white', 'shadow-lg');
         b.classList.add('bg-white', 'text-gray-600', 'border-gray-200');
       });
-      btn.classList.add('active', 'bg-teal-600', 'text-white', 'shadow-md');
+      btn.classList.add('bg-teal-600', 'text-white', 'shadow-lg');
       btn.classList.remove('bg-white', 'text-gray-600', 'border-gray-200');
 
+      // Filter logic
       cards.forEach(card => {
         const categories = card.getAttribute('data-category');
         if (filter === 'all' || categories.includes(filter)) {
-          card.style.display = 'block';
+          card.classList.remove('hidden');
         } else {
-          card.style.display = 'none';
+          card.classList.add('hidden');
         }
       });
     });

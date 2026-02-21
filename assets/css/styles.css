@@ -51,3 +51,28 @@
 .project-card > div:first-child {
     flex-grow: 1;
 }
+
+---
+---
+/* Your existing imports and variables remain above */
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.filter-btn.active {
+    pointer-events: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Ensure font consistency for benefits numbers */
+.text-lg.font-extrabold.text-teal-900 {
+    font-variant-numeric: tabular-nums;
+}
