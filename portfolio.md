@@ -32,6 +32,9 @@ permalink: /portfolio/
       <button class="filter-btn px-6 py-2 rounded-full bg-white border border-gray-200 text-gray-600 text-sm font-bold hover:border-teal-600 hover:text-teal-600 transition-all" data-filter="Reporting">
         Reporting
       </button>
+      <button class="filter-btn px-6 py-2 rounded-full bg-white border border-gray-200 text-gray-600 text-sm font-bold hover:border-teal-600 hover:text-teal-600 transition-all" data-filter="Finance">
+        Finance
+      </button>
     </div>
   </div>
 

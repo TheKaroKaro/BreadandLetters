@@ -1,3 +1,54 @@
+- title: "Sales Email Extraction - Commission Calculation"
+  description: "Automated data collation for Sales Commission Calculation."
+  categories: ["Finance"]
+  challenge: "Finance staff need to spend hours to copy sales details line by line per email into an excel each emails will have different line items."
+  solution: "Developed a smart RPA which detects email's line contents and automatically map those into Excel sheets"
+  results:
+   - label: "Efficiency"
+     value: "Saved 36.5 hours / month."
+
+   - label: "Accuracy"
+     value: "100% elimination of manual entry errors."
+     
+   - label: "Speed"
+     value: "Immediate data availability upon email receipt."
+
+  year: "2026"
+
+- title: "Finance AR - Master Data Consolidation"
+  description: "Automated Weekly Master Data collation and transformation using Power Query."
+  categories: ["Finance", "Data Transformation"]
+  challenge: "Finance AR teams spent significant time weekly manually merging disparate data sources, mapping vendor names, and generating sequential invoice numbers."
+  solution: "Engineered a Power Query ETL (Extract, Transform, Load) pipeline that automatically consolidates multiple sources into a single 'Golden Record' sheet with automated vendor mapping and date-based invoice generation."
+  results:
+  - label: "Efficiency"
+    value: "Saved 12 hours / month."
+  
+  - label: "Standardization"
+    value: "Eliminated 100% of manual VLOOKUP and 'Copy-Paste' errors."
+  
+  - label: "Automation"
+    value: "Converted a multi-hour task into a single-click data refresh."
+    
+  year: "2026"
+
+- title: "Zalo Customer Service - Automated Triage & Chatbot"
+  description: "Cloud-integrated automated response system for Zalo messaging."
+  categories: ["Customer Service", "AWS"]
+  challenge: "Support agents currently handle 900+ monthly chats manually; 30% are repetitive inquiries or spam, consuming ~100 hours of team capacity monthly."
+  solution: "Developed an AWS-hosted automated triage menu to provide self-service instructions and filter spam (Currently in UAT/Demo phase)."
+  results:
+  - label: "Status"
+    value: "Pre-launch / Demo Phase"
+  
+  - label: "Projected Efficiency"
+    value: "Est. 29.25 hours saved / month."
+  
+  - label: "Target Deflection"
+    value: "30% reduction in low-value manual tickets."
+    
+  year: "2026"
+
 - title: "eLeave & Attendance System"
   description: "A complete leave management solution for 150+ contact center agents. Replaced manual spreadsheet tracking."
   categories: ["Reporting"]
@@ -54,37 +105,4 @@
     
   year: "2025"
 
-- title: "Sales Email Extraction - Commission Calculation"
-  description: "Automated data collation for Sales Commission Calculation."
-  categories: ["Finance"]
-  challenge: "Finance staff need to spend hours to copy sales details line by line per email into an excel each emails will have different line items."
-  solution: "Developed a smart RPA which detects email's line contents and automatically map those into Excel sheets"
-  results:
-   - label: "Efficiency"
-     value: "Saved 36.5 hours / month."
 
-   - label: "Accuracy"
-     value: "100% elimination of manual entry errors."
-     
-   - label: "Speed"
-     value: "Immediate data availability upon email receipt."
-
-  year: "2026"
-
-
-- title: "Finance AR - Master Data Consolidation"
-  description: "Automated Weekly Master Data collation and transformation using Power Query."
-  categories: ["Finance", "Data Transformation"]
-  challenge: "Finance AR teams spent significant time weekly manually merging disparate data sources, mapping vendor names, and generating sequential invoice numbers."
-  solution: "Engineered a Power Query ETL (Extract, Transform, Load) pipeline that automatically consolidates multiple sources into a single 'Golden Record' sheet with automated vendor mapping and date-based invoice generation."
-  results:
-  - label: "Efficiency"
-    value: "Saved 12 hours / month."
-  
-  - label: "Standardization"
-    value: "Eliminated 100% of manual VLOOKUP and 'Copy-Paste' errors."
-  
-  - label: "Automation"
-    value: "Converted a multi-hour task into a single-click data refresh."
-    
-  year: "2026"
