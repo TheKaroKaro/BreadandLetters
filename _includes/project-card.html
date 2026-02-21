@@ -1,49 +1,38 @@
-<div class="project-card border rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition duration-300 flex flex-col h-full" 
-     data-category="{{ project.categories | join: ' ' }}">
-  <div class="p-8 flex-grow">
-    <div class="flex flex-wrap gap-2 mb-4">
-      {% for category in project.categories %}
-      <div class="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-xs font-semibold uppercase tracking-wider">
-        {{ category | replace: "-", " " }}
-      </div>
-      {% endfor %}
-    </div>
+<div class="project-card" data-categories='{{ project.categories | join: "," }}'>
+  <div class="project-content">
+    <span class="category-badge">{{ project.categories | first }}</span>
+    <h3 class="project-title">{{ project.title }}</h3>
+    <p class="project-description">{{ project.description }}</p>
     
-    <h3 class="text-2xl font-bold mb-3 text-gray-900 leading-tight">{{ project.title }}</h3>
-    <p class="text-gray-600 mb-6 text-sm leading-relaxed">{{ project.description }}</p>
-    
-    <div class="space-y-4 mb-6">
-      <div class="text-sm">
-        <span class="font-bold text-gray-900 uppercase text-[10px] tracking-widest block mb-1">Challenge</span>
-        <p class="text-gray-700">{{ project.challenge }}</p>
-      </div>
-      <div class="text-sm">
-        <span class="font-bold text-gray-900 uppercase text-[10px] tracking-widest block mb-1">Solution</span>
-        <p class="text-gray-700">{{ project.solution }}</p>
-      </div>
+    <div class="project-details">
+      <p><strong>Challenge:</strong> {{ project.challenge }}</p>
+      {% if project.solution %}
+      <p><strong>Solution:</strong> {{ project.solution }}</p>
+      {% endif %}
     </div>
 
     {% if project.results %}
-    <div class="bg-teal-50 rounded-xl p-5 mb-2 border border-teal-100">
-      <span class="font-bold text-teal-800 uppercase text-[10px] tracking-widest block mb-3 text-center">Measured Benefits</span>
-      <div class="grid grid-cols-2 gap-4">
+    <div class="project-results">
+      <strong>Impact & Benefits:</strong>
+      <div class="results-grid">
         {% for result in project.results %}
-        <div class="text-center border-r border-teal-200 last:border-0">
-          <div class="text-[10px] uppercase text-teal-600 font-bold mb-1">{{ result.label }}</div>
-          <div class="text-lg font-extrabold text-teal-900">{{ result.value }}</div>
+        <div class="result-item">
+          <span class="result-label">{{ result.label }}</span>
+          <span class="result-value">{{ result.value }}</span>
         </div>
         {% endfor %}
       </div>
     </div>
     {% endif %}
-  </div>
 
-  <div class="px-8 py-5 bg-gray-50 border-t border-gray-100 flex items-center justify-between mt-auto">
-    <div class="flex items-center text-xs font-medium text-gray-500">
-      <i class="far fa-calendar-alt mr-2 text-teal-600"></i> {{ project.year }}
+    <div class="status-bar">
+        <span class="status-label">Status</span>
+        <span class="status-value">{{ project.status | default: "Live / Production" }}</span>
     </div>
-    <div class="text-[10px] font-black px-2 py-1 bg-white border border-gray-200 rounded text-gray-400 uppercase tracking-tighter">
-      {{ project.status | default: "Live" }}
-    </div>
+  </div>
+  
+  <div class="project-footer">
+    <span class="project-year"><i class="far fa-calendar-alt"></i> {{ project.year }}</span>
+    <a href="#" class="discuss-link">Discuss Similar Project &rarr;</a>
   </div>
 </div>
