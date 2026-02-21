@@ -46,3 +46,40 @@ a, button {
     display: none !important;
   }
 }
+.project-results {
+    margin-top: 15px;
+    padding: 12px;
+    background: #f8fbff; /* Light blue tint to highlight achievements */
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+}
+
+.results-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.result-item {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #e0e6ed;
+    min-width: 100px;
+}
+
+.result-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #666;
+    font-weight: bold;
+}
+
+.result-value {
+    font-size: 0.95rem;
+    color: #007bff;
+    font-weight: 800;
+}

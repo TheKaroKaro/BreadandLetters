@@ -1,38 +1,38 @@
-<div class="project-card border rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition duration-300" 
-     data-categories="{{ project.categories | join: ' ' }}">
-  <div class="p-8">
-    <div class="flex items-center gap-3 mb-4">
-      {% for category in project.categories %}
-      <div class="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-xs font-medium">
-        {{ category | replace: "-", " " | capitalize }}
-      </div>
-      {% endfor %}
+<div class="project-card" data-categories='{{ project.categories | join: "," }}'>
+  <div class="project-content">
+    <span class="category-badge">{{ project.categories | first }}</span>
+    <h3 class="project-title">{{ project.title }}</h3>
+    <p class="project-description">{{ project.description }}</p>
+    
+    <div class="project-details">
+      <p><strong>Challenge:</strong> {{ project.challenge }}</p>
+      {% if project.solution %}
+      <p><strong>Solution:</strong> {{ project.solution }}</p>
+      {% endif %}
     </div>
-    
-    <h3 class="text-2xl font-bold mb-3 text-gray-900">{{ project.title }}</h3>
-    <p class="text-gray-600 mb-6">{{ project.description }}</p>
-    
-    <div class="bg-teal-50 rounded-xl p-4 mb-6">
-      <div class="flex items-center justify-between">
+
+    {% if project.results %}
+    <div class="project-results">
+      <strong>Impact & Benefits:</strong>
+      <div class="results-grid">
         {% for result in project.results %}
-        <div>
-          <div class="text-sm text-gray-600">{{ result.label }}</div>
-          <div class="text-2xl font-bold text-teal-700">{{ result.value }}</div>
+        <div class="result-item">
+          <span class="result-label">{{ result.label }}</span>
+          <span class="result-value">{{ result.value }}</span>
         </div>
         {% endfor %}
       </div>
     </div>
-    
-    <div class="flex items-center justify-between mt-6">
-      <div class="text-sm text-gray-500">
-        <i class="far fa-calendar-alt mr-1"></i> {{ project.year }}
-      </div>
-      <a href="/contact/" class="text-teal-600 hover:text-teal-700 font-medium inline-flex items-center">
-        Discuss Project
-        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-        </svg>
-      </a>
+    {% endif %}
+
+    <div class="status-bar">
+        <span class="status-label">Status</span>
+        <span class="status-value">{{ project.status | default: "Live / Production" }}</span>
     </div>
+  </div>
+  
+  <div class="project-footer">
+    <span class="project-year"><i class="far fa-calendar-alt"></i> {{ project.year }}</span>
+    <a href="#" class="discuss-link">Discuss Similar Project &rarr;</a>
   </div>
 </div>
