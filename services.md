@@ -164,7 +164,7 @@ permalink: /services/
     <div class="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-12 text-white">
       <div class="max-w-3xl">
         <div class="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-bold mb-6 backdrop-blur">
-          Coming Q3 2024
+          Coming Q2 2027
         </div>
         <h2 class="text-3xl md:text-4xl font-bold mb-6">Bread & Letters Academy</h2>
         <p class="text-xl mb-8 opacity-90">
