@@ -1,35 +1,62 @@
 title: "Bread & Letters"
-email: "info@breadandletters.com"
-description: "Jefri Karo Karo: Contact Center Leader & Automation Developer. Practical automation solutions and career insights."
+email: "hello@breadandletters.com"
+description: "Transform, Automate, Digitize. We help companies scale by eliminating manual and repetitive tasks through automation, digital transformation, and customer service outsourcing."
 url: "https://breadandletters.com"
 baseurl: ""
 
-# Personal Data (Used for centralization)
-author:
+# Company Information
+company:
+  name: "Bread & Letters"
+  founded: 2024
+  headquarters: "Southeast Asia"
+  service_regions: "Global"
+  tagline: "Transform. Automate. Digitize."
+
+# Founder/Leadership
+founder:
   name: "Jefri Karo Karo"
-  role: "Contact Center Leader & Automation Developer"
-  location: "Malaysia (Serving Globally)"
+  role: "Founder & CEO"
   linkedin: "jefrikrama"
-  twitter: "breadandletters"
+  bio: "Contact Center Leader & Automation Developer with 10+ years of operational experience."
+
+# Social Media
+social:
+  linkedin: "breadandletters"
+  twitter: "breadletters"
   github: "breadandletters"
-  status: "Open to Opportunities"
 
 # Navigation
 navigation:
   - title: "Home"
     url: "/"
-  - title: "My Profile"
-    url: "/profile/"
-  - title: "My Projects"
+  - title: "Services"
+    url: "/services/"
+  - title: "Our Work"
     url: "/portfolio/"
+  - title: "Academy"
+    url: "/academy/"
+  - title: "About"
+    url: "/about/"
   - title: "Contact"
     url: "/contact/"
 
-# External Links
+# External Resources
 external_links:
   articles: "https://articles.breadandletters.com"
   tools: "https://tools.breadandletters.com"
   academy: "https://academy.breadandletters.com"
+
+# Services Overview
+services:
+  automation:
+    title: "Automation & Digitization"
+    description: "Transform manual, repetitive tasks into streamlined automated workflows using Power Platform, RPA, and custom tools."
+  outsourcing:
+    title: "Customer Service Outsourcing"
+    description: "Scale your support with tech-enabled teams trained to deliver exceptional customer experiences."
+  academy:
+    title: "Academy & Training"
+    description: "Bridge the gap between education and employment with practical, job-ready training programs."
 
 plugins:
   - jekyll-feed
