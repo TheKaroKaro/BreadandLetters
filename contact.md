@@ -26,10 +26,10 @@ permalink: /contact/
             <i class="fab fa-linkedin text-blue-600"></i>
             <a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank" class="hover:text-teal-600">LinkedIn Profile</a>
           </div>
-          <div class="flex items-center gap-4">
+          <!--<div class="flex items-center gap-4">
             <i class="fas fa-map-marker-alt text-red-500"></i>
             <span>{{ site.author.location }}</span>
-          </div>
+          </div>-->
           <div class="flex items-center gap-4">
             <i class="fab fa-telegram text-blue-400"></i>
             <span class="text-sm text-gray-600">Messages go to Telegram</span>
